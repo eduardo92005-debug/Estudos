@@ -1,10 +1,10 @@
 from django.urls import path
 
-from . import views
+from .views import index, perguntas, resposta
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:pergunta_id>/', views.detail, name='detail'),
-    path('<int:pergunta_id>/resultados/', views.resultados, name ='resultados'),
-    path('<int:pergunta_id>/vote/',views.vote, name='vote'),
+    path('/', index, name='index'),
+    path('/perguntas/<int:pergunta_id>/', perguntas, name='pergunta'),
+    #path('/<int:pergunta_id>/', views.detail, name='detail'),
+    path('/perguntas/<int:pergunta_id>/resposta', resposta, name='resposta'),
 ]

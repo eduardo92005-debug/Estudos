@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Perguntas
+from .models import Pergunta, Opcoe
 
 # Register your models here.
 
-admin.site.register(Perguntas)
+admin.site.register(Pergunta)
+admin.site.register(Opcoe)
